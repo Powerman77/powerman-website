@@ -50,7 +50,7 @@ color:#25D366;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,0.55),
+linear-gradientrgba(0,0,0,0.68),
 rgba(0,0,0,0.55)),
 url('aviation.jpg');
 
