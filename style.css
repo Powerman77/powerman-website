@@ -1,20 +1,21 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f4f4f4;
+background:#07111f;
 color:white;
 }
 
 header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
+padding:18px 50px;
+background:rgba(0,0,0,0.65);
+backdrop-filter:blur(10px);
 z-index:1000;
 box-sizing:border-box;
 }
@@ -22,183 +23,249 @@ box-sizing:border-box;
 .logo-section{
 display:flex;
 align-items:center;
-gap:15px;
+gap:18px;
 }
 
 .logo-section img{
-width:70px;
-border-radius:8px;
+width:75px;
+border-radius:10px;
 }
 
-.logo-section h1{
+.logo-text h1{
 margin:0;
-font-size:28px;
+font-size:44px;
+letter-spacing:1px;
+}
+
+.logo-text p{
+margin:0;
+font-size:15px;
+color:#d4a437;
+letter-spacing:2px;
 }
 
 nav a{
 color:white;
-margin-left:25px;
 text-decoration:none;
-font-size:17px;
+margin-left:35px;
+font-size:19px;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#25D366;
+color:#d4a437;
 }
 
 .hero{
 height:100vh;
+
 background:
-linear-gradientrgba(0,0,0,0.68),
-rgba(0,0,0,0.55)),
+linear-gradient(rgba(0,0,0,0.72),
+rgba(0,0,0,0.72)),
 url('aviation.jpg');
 
 background-size:cover;
 background-position:center;
 
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+padding:0 70px;
+}
 
-text-align:center;
-padding:20px;
+.hero-content{
+max-width:720px;
+}
+
+.hero-small{
+color:#d4a437;
+font-size:26px;
+letter-spacing:2px;
+margin-bottom:10px;
 }
 
 .hero h2{
-font-size:58px;
-max-width:850px;
-margin-bottom:18px;
-color:#f5f5f5;
-line-height:1.2;
-text-shadow:0 3px 12px rgba(0,0,0,0.6);
-letter-spacing:1px;
+font-size:84px;
+line-height:1.05;
+margin-top:0;
+margin-bottom:25px;
 }
 
-.hero p{
-font-size:20px;
-max-width:760px;
+.gold{
+color:#d4a437;
+}
+
+.hero-sub{
+font-size:34px;
+margin-bottom:25px;
+color:#f0f0f0;
+}
+
+.hero-text{
+font-size:22px;
 line-height:1.8;
-margin-bottom:30px;
-color:#e6e6e6;
-text-shadow:0 2px 8px rgba(0,0,0,0.5);
-font-weight:300;
+color:#d7d7d7;
+margin-bottom:40px;
 }
 
 .hero-buttons{
 display:flex;
-gap:20px;
+gap:25px;
 flex-wrap:wrap;
-justify-content:center;
 }
 
 .contact-btn,
 .linkedin-btn{
-padding:15px 32px;
-border-radius:8px;
+
+padding:18px 38px;
+border-radius:10px;
 text-decoration:none;
-font-size:18px;
+font-size:20px;
 font-weight:bold;
 transition:0.3s;
+display:inline-block;
 }
 
 .contact-btn{
-background:#25D366;
-color:white;
+background:#d4a437;
+color:black;
 }
 
 .contact-btn:hover{
-background:#1daa52;
+background:#f0c04d;
+transform:translateY(-3px);
 }
 
 .linkedin-btn{
-background:#0077b5;
+border:2px solid white;
 color:white;
 }
 
 .linkedin-btn:hover{
-background:#005f91;
+background:white;
+color:black;
 }
 
 .services{
-background:#f5f7fa;
-padding:100px 20px;
-color:#111;
-text-align:center;
+background:#07111f;
+padding:90px 40px;
 }
 
-.services h2{
-font-size:48px;
-margin-bottom:60px;
-color:#021d1a;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
 }
 
-.service-box{
-background:white;
-max-width:900px;
-margin:25px auto;
+.service-card{
+background:#0d1a2b;
 padding:35px;
-border-radius:18px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+border-radius:20px;
+border:1px solid rgba(212,164,55,0.3);
 transition:0.3s;
-text-align:left;
-border-left:6px solid #0d6b57;
 }
 
-.service-box:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 28px rgba(0,0,0,0.15);
+.service-card:hover{
+transform:translateY(-8px);
+border-color:#d4a437;
 }
 
-.service-box h3{
-margin-top:0;
+.service-icon{
+font-size:52px;
+margin-bottom:20px;
+color:#d4a437;
+}
+
+.service-card h3{
 font-size:30px;
-color:#021d1a;
+margin-top:0;
+margin-bottom:20px;
 }
 
-.service-box p{
-font-size:18px;
-line-height:1.7;
-color:#555;
+.service-card p{
+font-size:19px;
+line-height:1.8;
+color:#cfcfcf;
+}
+
+.section-title{
+text-align:center;
+font-size:56px;
+margin-bottom:20px;
 }
 
 .about{
-background:#021d1a;
-padding:100px 20px;
+background:#0a1625;
+padding:100px 40px;
 text-align:center;
-}
-
-.about h2{
-font-size:46px;
-margin-bottom:30px;
 }
 
 .about p{
-max-width:900px;
+max-width:950px;
 margin:auto;
-font-size:20px;
-line-height:1.8;
+font-size:22px;
+line-height:1.9;
+color:#d7d7d7;
 }
 
 footer{
-background:#000;
-padding:40px 20px;
+background:black;
+padding:45px 20px;
 text-align:center;
-font-size:16px;
+}
+
+footer p{
+font-size:18px;
+color:#d0d0d0;
 }
 
 .whatsapp{
 position:fixed;
-bottom:30px;
 right:30px;
+bottom:30px;
 background:#25D366;
 color:white;
-padding:14px 22px;
+padding:16px 28px;
 border-radius:50px;
 text-decoration:none;
+font-size:18px;
 font-weight:bold;
-font-size:16px;
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
-z-index:1000;
+box-shadow:0 5px 18px rgba(0,0,0,0.4);
+z-index:999;
+}
+
+@media(max-width:900px){
+
+header{
+padding:15px 20px;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+padding:0 25px;
+}
+
+.hero h2{
+font-size:52px;
+}
+
+.hero-sub{
+font-size:26px;
+}
+
+.hero-text{
+font-size:18px;
+}
+
+.logo-text h1{
+font-size:30px;
+}
+
+.section-title{
+font-size:42px;
+}
+
 }
