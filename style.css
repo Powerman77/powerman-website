@@ -3,68 +3,127 @@ margin:0;
 font-family:Arial,sans-serif;
 background:#f4f4f4;
 color:white;
-text-align:center;
 }
 
 header{
-background:#021d1a;
-padding:40px 20px;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+z-index:1000;
+box-sizing:border-box;
 }
 
-header img{
-width:120px;
-border-radius:10px;
+.logo-section{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-section img{
+width:70px;
+border-radius:8px;
+}
+
+.logo-section h1{
+margin:0;
+font-size:28px;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-size:17px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#25D366;
 }
 
 .hero{
-height:90vh;
-background:url('aviation.jpg');
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.55),
+rgba(0,0,0,0.55)),
+url('aviation.jpg');
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+
+text-align:center;
 padding:20px;
 }
 
 .hero h2{
-font-size:60px;
+font-size:72px;
+max-width:900px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:22px;
-max-width:800px;
-line-height:1.6;
+font-size:24px;
+max-width:850px;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.contact-btn,
+.linkedin-btn{
+padding:15px 32px;
+border-radius:8px;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
 }
 
 .contact-btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#0d6b57;
+background:#25D366;
 color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
 }
 
-.services{
-background:white;
-color:black;
-padding:80px 20px;
+.contact-btn:hover{
+background:#1daa52;
+}
+
+.linkedin-btn{
+background:#0077b5;
+color:white;
+}
+
+.linkedin-btn:hover{
+background:#005f91;
 }
 
 .services{
 background:#f5f7fa;
 padding:100px 20px;
 color:#111;
+text-align:center;
 }
 
 .services h2{
-font-size:42px;
-margin-bottom:50px;
+font-size:48px;
+margin-bottom:60px;
 color:#021d1a;
 }
 
@@ -81,13 +140,13 @@ border-left:6px solid #0d6b57;
 }
 
 .service-box:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 24px rgba(0,0,0,0.15);
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.15);
 }
 
 .service-box h3{
 margin-top:0;
-font-size:28px;
+font-size:30px;
 color:#021d1a;
 }
 
@@ -96,17 +155,32 @@ font-size:18px;
 line-height:1.7;
 color:#555;
 }
+
+.about{
+background:#021d1a;
+padding:100px 20px;
+text-align:center;
 }
-.linkedin-btn{
-display:inline-block;
-margin-top:15px;
-padding:15px 30px;
-background:#0077b5;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
+
+.about h2{
+font-size:46px;
+margin-bottom:30px;
 }
+
+.about p{
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+}
+
+footer{
+background:#000;
+padding:40px 20px;
+text-align:center;
+font-size:16px;
+}
+
 .whatsapp{
 position:fixed;
 bottom:30px;
@@ -118,13 +192,6 @@ border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 font-size:16px;
-font-family:Arial,sans-serif;
 box-shadow:0 4px 12px rgba(0,0,0,0.3);
-transition:0.3s;
 z-index:1000;
-}
-
-.whatsapp:hover{
-background:#1ebc59;
-transform:scale(1.05);
 }
