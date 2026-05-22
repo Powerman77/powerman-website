@@ -464,7 +464,7 @@ justify-content:center;
 .founder-container{
 max-width:1200px;
 display:grid;
-grid-template-columns:300px 1fr;
+grid-template-columns:260px 1fr;
 gap:60px;
 align-items:center;
 
