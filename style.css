@@ -324,3 +324,17 @@ color:#e0e0e0;
 .project-card:hover img{
 transform:scale(1.08);
 }
+.about{
+background:#0a1625;
+padding:100px 40px;
+text-align:center;
+}
+
+.about p{
+max-width:1000px;
+margin:auto;
+font-size:24px;
+line-height:2;
+color:#d7d7d7;
+font-weight:300;
+}
