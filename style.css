@@ -34,11 +34,13 @@ width:75px;
 border-radius:10px;
 }
 
-.logo-text h1{
+.logo-text p{
 margin:0;
-font-size:36px;
+font-size:10px;
+color:#d4a437;
 letter-spacing:1px;
-font-weight:700;
+font-weight:500;
+white-space:nowrap;
 }
 
 .logo-text p{
