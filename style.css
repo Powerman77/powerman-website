@@ -153,13 +153,16 @@ transform:translateY(-3px);
 }
 
 .linkedin-btn{
-border:2px solid white;
+background:#0077b5;
 color:white;
+border:2px solid #0077b5;
 }
 
 .linkedin-btn:hover{
-background:white;
-color:black;
+background:#005f91;
+border-color:#005f91;
+color:white;
+transform:translateY(-3px);
 }
 
 /* SECTION TITLES */
