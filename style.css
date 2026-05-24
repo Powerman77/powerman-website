@@ -490,7 +490,7 @@ display:grid;
 grid-template-columns:300px 1fr;
 
 gap:70px;
-align-items:center;
+align-items:flex-start;
 
 background:rgba(255,255,255,0.03);
 
@@ -525,7 +525,8 @@ box-shadow:0 10px 30px rgba(0,0,0,0.45);
 }
 
 .founder-content{
-padding-top:10px;
+padding-top:70px;
+max-width:760px;
 }
 
 .founder-small{
