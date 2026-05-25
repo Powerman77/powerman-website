@@ -83,8 +83,8 @@ color:#d4a437;
 height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.62),
-rgba(0,0,0,0.72)),
+linear-gradient(rgba(0,0,0,0.35),
+rgba(0,0,0,0.45)),
 url('aviation.jpg');
 
 background-size:cover;
