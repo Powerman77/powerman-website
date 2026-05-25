@@ -731,3 +731,48 @@ font-size:17px;
 }
 
 }
+/* MOBILE DROPDOWN MENU */
+
+.menu-toggle{
+display:none;
+font-size:34px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+header{
+flex-wrap:wrap;
+padding:18px 20px;
+}
+
+.menu-toggle{
+display:block;
+position:absolute;
+top:22px;
+right:20px;
+z-index:2000;
+}
+
+.mobile-nav{
+display:none;
+flex-direction:column;
+width:100%;
+background:rgba(0,0,0,0.96);
+padding:20px;
+margin-top:15px;
+border-radius:14px;
+}
+
+.mobile-nav.active{
+display:flex;
+}
+
+.mobile-nav a{
+margin:12px 0;
+font-size:18px;
+text-align:center;
+}
+
+}
