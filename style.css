@@ -735,10 +735,11 @@ font-size:17px;
 .menu-toggle{
 display:none;
 font-size:34px;
-color:white;
+color:#d4a437;
 cursor:pointer;
+font-weight:300;
+transition:0.3s;
 }
-
 @media(max-width:900px){
 
 header{
