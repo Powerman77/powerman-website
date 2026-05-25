@@ -77,12 +77,14 @@ color:#d4a437;
 
 /* HERO SECTION */
 
+/* PREMIUM HERO SECTION */
+
 .hero{
 height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,0.68),
-rgba(0,0,0,0.68)),
+linear-gradient(rgba(0,0,0,0.62),
+rgba(0,0,0,0.72)),
 url('aviation.jpg');
 
 background-size:cover;
@@ -90,94 +92,184 @@ background-position:center;
 
 display:flex;
 align-items:center;
-padding:0 70px;
-box-sizing:border-box;
+
+padding:0 90px;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+rgba(5,12,22,0.92) 0%,
+rgba(5,12,22,0.70) 40%,
+rgba(5,12,22,0.35) 100%
+);
 }
 
 .hero-content{
-max-width:680px;
+position:relative;
+z-index:2;
+
+max-width:700px;
+
 padding-top:40px;
 }
 
 .hero-small{
 color:#d4a437;
-font-size:16px;
-letter-spacing:4px;
-margin-bottom:18px;
-font-weight:500;
-}
-color:#d4a437;
-font-size:18px;
-letter-spacing:3px;
-margin-bottom:15px;
-font-weight:500;
+
+font-size:15px;
+
+letter-spacing:5px;
+
+margin-bottom:22px;
+
+font-weight:600;
 }
 
 .hero h2{
-font-size:64px;
-line-height:1.05;
+font-size:78px;
+
+line-height:1.02;
+
 margin-top:0;
-margin-bottom:22px;
+
+margin-bottom:25px;
+
 font-weight:700;
-letter-spacing:-1px;
+
+letter-spacing:-2px;
+
+color:white;
 }
 
 .gold{
 color:#d4a437;
+display:block;
 }
 
 .hero-sub{
-font-size:24px;
-margin-bottom:22px;
-color:#f3f3f3;
+font-size:30px;
+
+margin-bottom:28px;
+
+color:#f2f2f2;
+
 font-weight:500;
+
 line-height:1.4;
 }
+
 .hero-text{
-font-size:17px;
+font-size:18px;
+
 line-height:1.9;
-color:#d7d7d7;
-margin-bottom:25px;
-max-width:640px;
+
+color:#d6d6d6;
+
+max-width:650px;
+
 font-weight:300;
-}
-.hero-buttons{
-display:flex;
-gap:22px;
-flex-wrap:wrap;
-margin-top:45px;
+
+margin-bottom:50px;
 }
 
-margin-top:60px;
+.hero-buttons{
+display:flex;
+
+gap:24px;
+
+flex-wrap:wrap;
+}
+
 .contact-btn,
 .linkedin-btn{
 
-padding:15px 30px;
-border-radius:10px;
+padding:16px 34px;
+
+border-radius:12px;
+
 text-decoration:none;
+
 font-size:17px;
+
 font-weight:600;
+
 transition:0.3s;
+
 display:inline-block;
 }
 
 .contact-btn{
 background:#d4a437;
+
 color:black;
 }
 
 .contact-btn:hover{
-background:#f0c04d;
+background:#e5b845;
+
 transform:translateY(-3px);
 }
 
 .linkedin-btn{
 background:#0077b5;
+
 color:white;
-border:2px solid #0077b5;
 }
 
 .linkedin-btn:hover{
+background:#0a66c2;
+
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+padding:0 28px;
+}
+
+.hero-content{
+max-width:100%;
+padding-top:80px;
+}
+
+.hero h2{
+font-size:52px;
+}
+
+.hero-sub{
+font-size:22px;
+}
+
+.hero-text{
+font-size:17px;
+line-height:1.8;
+}
+
+.hero-buttons{
+gap:18px;
+}
+
+.contact-btn,
+.linkedin-btn{
+padding:14px 24px;
+font-size:16px;
+}
+
+}
 background:#005f91;
 border-color:#005f91;
 color:white;
