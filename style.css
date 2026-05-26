@@ -170,7 +170,8 @@ flex-wrap:wrap;
 }
 
 .contact-btn,
-.linkedin-btn{
+.linkedin-btn,
+.podcast-btn{
 
 padding:16px 34px;
 border-radius:12px;
@@ -200,7 +201,15 @@ color:white;
 background:#0a66c2;
 transform:translateY(-3px);
 }
+.podcast-btn{
+background:#ff0000;
+color:white;
+}
 
+.podcast-btn:hover{
+background:#cc0000;
+transform:translateY(-3px);
+}
 /* SECTION TITLES */
 
 .section-title{
