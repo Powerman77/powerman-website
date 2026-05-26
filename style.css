@@ -172,7 +172,6 @@ flex-wrap:wrap;
 .contact-btn,
 .linkedin-btn,
 .podcast-btn{
-
 padding:16px 34px;
 border-radius:12px;
 text-decoration:none;
@@ -204,8 +203,19 @@ transform:translateY(-3px);
 .podcast-btn{
 background:#ff0000;
 color:white;
+padding:16px 34px;
+border-radius:12px;
+text-decoration:none;
+font-size:17px;
+font-weight:600;
+transition:0.3s;
+display:inline-block;
 }
 
+.podcast-btn:hover{
+background:#cc0000;
+transform:translateY(-3px);
+}
 .podcast-btn:hover{
 background:#cc0000;
 transform:translateY(-3px);
