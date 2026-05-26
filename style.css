@@ -4,6 +4,7 @@ font-family:Arial,sans-serif;
 background:#07111f;
 color:white;
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 /* HEADER */
@@ -101,6 +102,86 @@ position:relative;
 overflow:hidden;
 }
 
+/* GOLD AVIATION LINES */
+
+.aviation-lines{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:2;
+pointer-events:none;
+}
+
+.aviation-lines span{
+position:absolute;
+height:1px;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(212,164,55,0.9),
+transparent
+);
+
+box-shadow:0 0 12px rgba(212,164,55,0.8);
+
+animation:aviationMove 8s linear infinite;
+}
+
+/* LINE 1 */
+
+.aviation-lines span:nth-child(1){
+top:25%;
+width:420px;
+left:-450px;
+animation-delay:0s;
+}
+
+/* LINE 2 */
+
+.aviation-lines span:nth-child(2){
+top:52%;
+width:300px;
+left:-350px;
+animation-delay:2s;
+}
+
+/* LINE 3 */
+
+.aviation-lines span:nth-child(3){
+top:78%;
+width:500px;
+left:-520px;
+animation-delay:4s;
+}
+
+@keyframes aviationMove{
+
+0%{
+transform:translateX(0);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+90%{
+opacity:1;
+}
+
+100%{
+transform:translateX(2200px);
+opacity:0;
+}
+
+}
+
+/* HERO OVERLAY */
+
 .hero-overlay{
 position:absolute;
 top:0;
@@ -114,11 +195,15 @@ rgba(5,12,22,0.72) 0%,
 rgba(5,12,22,0.40) 40%,
 rgba(5,12,22,0.10) 100%
 );
+
+z-index:1;
 }
+
+/* HERO CONTENT */
 
 .hero-content{
 position:relative;
-z-index:2;
+z-index:3;
 max-width:700px;
 padding-top:40px;
 }
@@ -169,6 +254,8 @@ gap:24px;
 flex-wrap:wrap;
 }
 
+/* BUTTONS */
+
 .contact-btn,
 .linkedin-btn,
 .podcast-btn{
@@ -200,32 +287,23 @@ color:white;
 background:#0a66c2;
 transform:translateY(-3px);
 }
+
 .podcast-btn{
 background:#ff0000;
 color:white;
-padding:16px 34px;
-border-radius:12px;
-text-decoration:none;
-font-size:17px;
-font-weight:600;
-transition:0.3s;
-display:inline-block;
 }
 
 .podcast-btn:hover{
 background:#cc0000;
 transform:translateY(-3px);
 }
-.podcast-btn:hover{
-background:#cc0000;
-transform:translateY(-3px);
-}
+
 /* SECTION TITLES */
 
 .section-title{
 text-align:center;
 font-size:48px;
-margin-bottom:18px;
+margin-bottom:20px;
 font-weight:700;
 }
 
@@ -257,7 +335,7 @@ font-weight:300;
 text-align:justify;
 }
 
-/* TEAM SECTION */
+/* DOMAIN EXPERTS */
 
 .team-section{
 background:#07111f;
@@ -301,7 +379,7 @@ border-color:#d4a437;
 }
 
 .expertise-card h3{
-font-size:26px;
+font-size:24px;
 margin-top:0;
 margin-bottom:22px;
 color:#d4a437;
@@ -359,7 +437,7 @@ color:#d4a437;
 }
 
 .service-card h3{
-font-size:26px;
+font-size:24px;
 margin-top:0;
 margin-bottom:20px;
 }
@@ -409,6 +487,7 @@ bottom:0;
 left:0;
 width:100%;
 padding:28px;
+
 background:linear-gradient(
 transparent,
 rgba(0,0,0,0.92)
@@ -418,7 +497,7 @@ box-sizing:border-box;
 }
 
 .project-overlay h3{
-font-size:26px;
+font-size:24px;
 margin-bottom:14px;
 }
 
@@ -444,11 +523,17 @@ display:grid;
 grid-template-columns:300px 1fr;
 gap:70px;
 align-items:flex-start;
+
 background:rgba(255,255,255,0.03);
+
 padding:70px;
+
 border-radius:30px;
+
 border:1px solid rgba(212,164,55,0.15);
+
 box-shadow:0 15px 50px rgba(0,0,0,0.35);
+
 box-sizing:border-box;
 }
 
@@ -623,7 +708,8 @@ gap:18px;
 }
 
 .contact-btn,
-.linkedin-btn{
+.linkedin-btn,
+.podcast-btn{
 padding:14px 24px;
 font-size:16px;
 }
@@ -683,84 +769,6 @@ transform:translateY(-10px);
 to{
 opacity:1;
 transform:translateY(0);
-}
-
-}
-/* AVIATION GOLD LINES */
-
-.aviation-lines{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:1;
-pointer-events:none;
-}
-
-.aviation-lines span{
-position:absolute;
-
-height:1px;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(212,164,55,0.9),
-transparent
-);
-
-animation:aviationMove 8s linear infinite;
-}
-
-/* LINE 1 */
-
-.aviation-lines span:nth-child(1){
-top:25%;
-width:420px;
-left:-450px;
-animation-delay:0s;
-}
-
-/* LINE 2 */
-
-.aviation-lines span:nth-child(2){
-top:52%;
-width:300px;
-left:-350px;
-animation-delay:2s;
-}
-
-/* LINE 3 */
-
-.aviation-lines span:nth-child(3){
-top:78%;
-width:500px;
-left:-520px;
-animation-delay:4s;
-}
-
-/* ANIMATION */
-
-@keyframes aviationMove{
-
-0%{
-transform:translateX(0);
-opacity:0;
-}
-
-10%{
-opacity:1;
-}
-
-90%{
-opacity:1;
-}
-
-100%{
-transform:translateX(2200px);
-opacity:0;
 }
 
 }
