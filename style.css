@@ -879,12 +879,12 @@ padding-left:24px;
 
 /* SHOW MENU */
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover{
 
 display:block;
 
 }
-
 /* FADE */
 
 @keyframes dropdownFade{
