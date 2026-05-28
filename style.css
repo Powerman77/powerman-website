@@ -775,10 +775,14 @@ transform:translateY(0);
 /* PREMIUM AVIATION DROPDOWN */
 
 .dropdown{
-position:relative;
-display:inline-block;
-}
 
+position:relative;
+
+display:inline-block;
+
+padding-bottom:25px;
+
+}
 .dropdown > a{
 color:white;
 text-decoration:none;
