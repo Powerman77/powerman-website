@@ -1223,8 +1223,13 @@ max-width:90%;
 
 .service-hero p{
 
-font-size:22px;
+font-size:16px;
 
+max-width:220px;
+
+line-height:1.4;
+
+}
 max-width:90%;
 
 }
