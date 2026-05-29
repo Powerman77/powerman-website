@@ -1204,9 +1204,15 @@ padding:0 24px;
 
 .service-hero h1{
 
-font-size:42px;
+font-size:28px;
 
-line-height:1.05;
+line-height:1.1;
+
+max-width:240px;
+
+margin-bottom:14px;
+
+font-weight:700;
 
 }
 line-height:1.02;
