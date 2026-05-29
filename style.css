@@ -989,9 +989,9 @@ font-size:20px;
 
 .service-page{
 
-padding-top:170px;
+padding-top:50px;
 
-padding-bottom:120px;
+padding-bottom:80px;
 
 background:
 
@@ -1001,7 +1001,7 @@ linear-gradient(
 #08192f
 );
 
-min-height:100vh;
+min-height:auto;
 
 }
 
