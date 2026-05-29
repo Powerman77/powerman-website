@@ -1198,7 +1198,19 @@ margin-top:90px;
 
 .service-hero-content{
 
-padding:0 24px;
+padding-left:32px;
+
+padding-right:32px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+height:100%;
+
+}
 
 }
 
