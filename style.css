@@ -1125,11 +1125,21 @@ position:relative;
 
 z-index:2;
 
-max-width:1200px;
-
 width:100%;
 
-padding:0 70px;
+max-width:1200px;
+
+padding-left:120px;
+
+padding-right:120px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+height:100%;
 
 box-sizing:border-box;
 
