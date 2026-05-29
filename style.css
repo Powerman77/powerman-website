@@ -1072,7 +1072,7 @@ margin-bottom:12px;
 
 .service-hero{
 
-height:420px;
+height:550px;
 
 display:flex;
 
@@ -1084,9 +1084,13 @@ position:relative;
 
 margin-top:100px;
 
-background-size:cover;
+background-size:contain;
 
-background-position:center;
+background-repeat:no-repeat;
+
+background-position:center center;
+
+background-color:#07111f;
 
 overflow:hidden;
 
