@@ -1161,12 +1161,15 @@ margin-bottom:20px;
 
 .service-hero p{
 
-font-size:28px;
+font-size:26px;
 
 color:#d4a437;
 
-}
+max-width:650px;
 
+line-height:1.4;
+
+}
 @media(max-width:900px){
 
 .service-hero{
