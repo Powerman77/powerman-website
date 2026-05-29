@@ -1072,7 +1072,7 @@ margin-bottom:12px;
 
 .service-hero{
 
-height:520px;
+height:460px;
 
 display:flex;
 
@@ -1095,6 +1095,7 @@ overflow:hidden;
 background-color:#07111f;
 
 }
+
 .service-hero::before{
 
 content:"";
@@ -1170,11 +1171,15 @@ max-width:650px;
 line-height:1.4;
 
 }
+
+
+/* MOBILE */
+
 @media(max-width:900px){
 
 .service-hero{
 
-height:360px;
+height:320px;
 
 margin-top:90px;
 
