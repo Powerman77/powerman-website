@@ -1147,11 +1147,15 @@ box-sizing:border-box;
 
 .service-hero h1{
 
-font-size:72px;
-
-margin-bottom:18px;
+font-size:58px;
 
 line-height:1.05;
+
+font-weight:700;
+
+max-width:650px;
+
+margin-bottom:20px;
 
 }
 
