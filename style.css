@@ -1072,7 +1072,7 @@ margin-bottom:12px;
 
 .service-hero{
 
-height:550px;
+height:520px;
 
 display:flex;
 
@@ -1084,18 +1084,17 @@ position:relative;
 
 margin-top:100px;
 
-background-size:contain;
-
-background-repeat:no-repeat;
+background-size:cover;
 
 background-position:center center;
 
-background-color:#07111f;
+background-repeat:no-repeat;
 
 overflow:hidden;
 
-}
+background-color:#07111f;
 
+}
 .service-hero::before{
 
 content:"";
