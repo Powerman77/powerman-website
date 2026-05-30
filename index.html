@@ -670,5 +670,37 @@ menuToggle.classList.toggle('active');
 </script>
 
 </body>
+<script>
 
+const reveals =
+document.querySelectorAll(
+".reveal"
+);
+
+window.addEventListener(
+"scroll",
+function(){
+
+reveals.forEach(
+item=>{
+
+const top =
+item.getBoundingClientRect().top;
+
+const visible =
+window.innerHeight-100;
+
+if(top<visible){
+
+item.classList.add(
+"active"
+);
+
+}
+
+});
+
+});
+
+</script>
 </html>
