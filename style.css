@@ -1337,3 +1337,28 @@ padding:50px 30px;
 }
 
 }
+/* SCROLL ANIMATIONS */
+
+.reveal{
+
+opacity:0;
+
+transform:
+
+translateY(40px);
+
+transition:
+
+all 1s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
