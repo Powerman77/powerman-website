@@ -1093,7 +1093,7 @@ background-repeat:no-repeat;
 overflow:hidden;
 
 background-color:#07111f;
-
+filter:brightness(1.08);
 }
 
 .service-hero::before{
