@@ -1114,10 +1114,9 @@ background:
 
 linear-gradient(
 90deg,
-rgba(5,10,20,0.82),
-rgba(5,10,20,0.45)
+rgba(5,10,20,0.45),
+rgba(5,10,20,0.15)
 );
-
 }
 
 .service-hero-content{
