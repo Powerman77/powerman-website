@@ -1574,3 +1574,34 @@ line-height:1.6;
 }
 
 }
+.service-highlight{
+
+margin-top:60px;
+
+padding:40px;
+
+border-radius:20px;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(212,164,55,.12),
+rgba(255,255,255,.03)
+);
+
+border:
+
+1px solid
+
+rgba(212,164,55,.25);
+
+text-align:center;
+
+}
+
+.service-highlight h2{
+
+margin-bottom:15px;
+
+}
