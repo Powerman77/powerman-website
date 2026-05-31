@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POWERMAN | Aviation · Turbine · Metal</title>
+  <meta name="description" content="POWERMAN is India's specialist strategic advisory firm for aviation, gas turbines, and industrial infrastructure. Business jet advisory, helipad consultancy, MRO, power plant decommissioning and more across India, Madagascar and South Asia." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sky: #0A2E52;
+      --sky-mid: #1A4A7A;
+      --accent: #E8B84B;
+      --light: #F8F6F1;
+      --mid: #E8E4DC;
+      --ink: #1A1A1A;
+      --muted: #6B7280;
+      --white: #FFFFFF;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--sky);
+      padding: 16px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand-logo { height: 44px; width: auto; }
+    .brand-divider { width: 1px; height: 32px; background: rgba(232,184,75,0.35); }
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: 1px; line-height: 1; }
+    .brand-sub { font-size: 9px; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-top: 3px; }
+
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: var(--sky);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+    .mobile-menu { display: none; background: var(--sky); padding: 20px 24px; flex-direction: column; gap: 16px; }
+    .mobile-menu a { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── HERO ── */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+
+    .hero-left {
+      background: var(--sky);
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      border: 50px solid rgba(232,184,75,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .hero-h1 { font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 900; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .hero-h1 em { color: var(--accent); font-style: normal; }
+    .hero-p { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.58); font-weight: 300; max-width: 360px; margin-bottom: 36px; }
+
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { background: var(--accent); color: var(--sky); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 12px 26px; border: none; cursor: pointer; text-decoration: none; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary { background: transparent; color: var(--white); font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 12px 26px; border: 1px solid rgba(255,255,255,0.25); cursor: pointer; text-decoration: none; transition: border-color 0.2s; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.5); }
+
+    .hero-right { background: var(--mid); padding: 40px 36px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-svc-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.1); }
+
+    .quick-service { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 0.5px solid rgba(0,0,0,0.08); text-decoration: none; transition: background 0.15s; }
+    .quick-service:last-child { border-bottom: none; }
+    .qs-num { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--accent); width: 28px; flex-shrink: 0; }
+    .qs-body { flex: 1; }
+    .qs-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+    .qs-sub { font-size: 11px; color: var(--muted); }
+    .qs-arrow { color: var(--accent); font-size: 14px; margin-left: auto; transition: transform 0.2s; }
+    .quick-service:hover .qs-arrow { transform: translateX(3px); }
+
+    /* ── STATS RIBBON ── */
+    .ribbon { background: var(--accent); padding: 18px 48px; display: flex; }
+    .rib-item { flex: 1; text-align: center; border-right: 1px solid rgba(10,46,82,0.15); }
+    .rib-item:last-child { border-right: none; }
+    .rib-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--sky); line-height: 1; }
+    .rib-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(10,46,82,0.55); margin-top: 4px; }
+
+    /* ── SECTION COMMONS ── */
+    .sec-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .sec-h2 { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+    .sec-h2-light { color: var(--white); }
+
+    /* ── SERVICES ── */
+    .services-section { padding: 64px 48px; background: var(--white); }
+    .services-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; }
+    .view-all { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--sky); text-decoration: none; border-bottom: 1px solid var(--sky); padding-bottom: 2px; transition: color 0.2s; }
+    .view-all:hover { color: var(--accent); border-color: var(--accent); }
+
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--mid); }
+    .svc-card { background: var(--white); padding: 32px 28px; transition: background 0.2s; text-decoration: none; display: block; }
+    .svc-card:hover { background: #F0EDE6; }
+    .svc-num { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--mid); line-height: 1; margin-bottom: 14px; }
+    .svc-title { font-size: 15px; font-weight: 500; color: var(--sky); margin-bottom: 10px; }
+    .svc-desc { font-size: 12px; line-height: 1.75; color: var(--muted); font-weight: 300; }
+    .svc-bar { width: 28px; height: 2px; background: var(--accent); margin-top: 18px; }
+
+    /* ── ABOUT + FOUNDER ── */
+    .about-section { display: grid; grid-template-columns: 3fr 2fr; background: var(--sky); }
+    .about-left { padding: 64px 48px; border-right: 1px solid rgba(232,184,75,0.12); }
+    .about-text { font-size: 13px; line-height: 1.95; color: rgba(255,255,255,0.55); font-weight: 300; margin-bottom: 28px; }
+    .geo-row { display: flex; gap: 24px; margin-top: 8px; }
+    .geo-item { display: flex; align-items: center; gap: 7px; font-size: 12px; color: rgba(255,255,255,0.45); }
+    .geo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    .about-right { padding: 64px 36px; }
+    .founder-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .founder-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(232,184,75,0.1);
+      border: 1px solid rgba(232,184,75,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 20px; color: var(--accent);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .founder-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .founder-name { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .founder-role { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .founder-bio { font-size: 12px; line-height: 1.85; color: rgba(255,255,255,0.5); font-weight: 300; margin-bottom: 20px; }
+    .edu-list { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 0.5px solid rgba(232,184,75,0.2); }
+    .edu-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: rgba(255,255,255,0.4); }
+    .edu-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* ── DOMAIN EXPERTS ── */
+    .experts-section { padding: 64px 48px; background: var(--light); }
+    .experts-intro { font-size: 13px; line-height: 1.9; color: var(--muted); font-weight: 300; max-width: 640px; margin-bottom: 40px; }
+    .experts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--mid); }
+    .expert-card { background: var(--white); padding: 28px 24px; }
+    .expert-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--sky); margin-bottom: 12px; }
+    .expert-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .expert-list li { font-size: 12px; color: var(--muted); font-weight: 300; display: flex; align-items: center; gap: 8px; }
+    .expert-list li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .expert-desc { font-size: 12px; line-height: 1.75; color: var(--muted); font-weight: 300; }
+
+    /* ── PROJECTS ── */
+    .projects-section { padding: 64px 48px; background: var(--white); }
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--mid); margin-top: 40px; }
+    .project-card { background: var(--white); overflow: hidden; }
+    .project-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .project-body { padding: 20px 24px; }
+    .project-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--sky); margin-bottom: 6px; }
+    .project-desc { font-size: 12px; line-height: 1.7; color: var(--muted); font-weight: 300; }
+    .project-bar { width: 24px; height: 2px; background: var(--accent); margin-top: 12px; }
+
+    /* ── CONTACT ── */
+    .contact-section { padding: 64px 48px; background: var(--sky); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 40px; }
+    .contact-info-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 20px; }
+    .contact-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .contact-icon { color: var(--accent); font-size: 18px; margin-top: 1px; }
+    .contact-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
+    .contact-value { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 300; }
+    .contact-value a { color: var(--accent); text-decoration: none; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(232,184,75,0.2);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      padding: 10px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group select option { background: var(--sky); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { background: var(--accent); color: var(--sky); font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 13px 32px; border: none; cursor: pointer; align-self: flex-start; transition: opacity 0.2s; }
+    .form-submit:hover { opacity: 0.88; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); padding: 32px 48px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--accent); letter-spacing: 1px; margin-bottom: 8px; }
+    .footer-brand-tagline { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 12px; }
+    .footer-brand-desc { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.35); font-weight: 300; }
+    .footer-col-title { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.45); text-decoration: none; font-weight: 300; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+    .footer-links-inline { display: flex; gap: 20px; }
+    .footer-links-inline a { font-size: 11px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
+    .footer-links-inline a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 14px 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 48px 24px; }
+      .hero-h1 { font-size: 36px; }
+      .ribbon { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+      .rib-item { flex: 1 1 40%; border-right: none; }
+      .services-section, .projects-section, .experts-section, .contact-section { padding: 48px 24px; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .about-section { grid-template-columns: 1fr; }
+      .about-left { padding: 48px 24px; border-right: none; border-bottom: 1px solid rgba(232,184,75,0.12); }
+      .about-right { padding: 40px 24px; }
+      .experts-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; padding: 0 20px 28px; }
+      footer { padding: 32px 20px; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+      .services-head { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+
+    @media (max-width: 560px) {
+      .svc-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Powerman Logo" class="brand-logo" />
+      <div class="brand-divider"></div>
+      <div class="brand-text">
+        <span class="brand-name">POWERMAN</span>
+        <span class="brand-sub">Aviation · Turbine · Metal</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experts">Experts</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="this.closest('.mobile-menu').classList.remove('open')">Home</a>
+    <a href="#about" onclick="this.closest('.mobile-menu').classList.remove('open')">About</a>
+    <a href="#services" onclick="this.closest('.mobile-menu').classList.remove('open')">Services</a>
+    <a href="#experts" onclick="this.closest('.mobile-menu').classList.remove('open')">Experts</a>
+    <a href="#projects" onclick="this.closest('.mobile-menu').classList.remove('open')">Projects</a>
+    <a href="#contact" onclick="this.closest('.mobile-menu').classList.remove('open')">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">New Delhi &nbsp;·&nbsp; India &nbsp;·&nbsp; South Asia &nbsp;·&nbsp; Madagascar</div>
+      <h1 class="hero-h1">India's Premier<br><em>Aviation</em><br>Advisory Firm</h1>
+      <p class="hero-p">Strategic advisory across business aviation, helipad infrastructure, MRO, gas turbines, and power plant decommissioning — backed by 20+ years of regulatory and operational mastery.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#experts" class="btn-secondary">Our Experts</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-svc-tag">Our Core Services</div>
+      <a href="business-jet-advisory.html" class="quick-service">
+        <div class="qs-num">01</div>
+        <div class="qs-body"><div class="qs-title">Business Jet &amp; Helicopter Advisory</div><div class="qs-sub">Acquisitions, leasing, NSOP deployment</div></div>
+        <span class="qs-arrow">→</span>
+      </a>
+      <a href="helipad-consultancy.html" class="quick-service">
+        <div class="qs-num">02</div>
+        <div class="qs-body"><div class="qs-title">Helipad Consultancy</div><div class="qs-sub">Design, approvals, construction supervision</div></div>
+        <span class="qs-arrow">→</span>
+      </a>
+      <a href="aai-height-clearance.html" class="quick-service">
+        <div class="qs-num">03</div>
+        <div class="qs-body"><div class="qs-title">AAI Height Clearance NOC</div><div class="qs-sub">Expert DGCA regulatory guidance</div></div>
+        <span class="qs-arrow">→</span>
+      </a>
+      <a href="power-plant-decommissioning.html" class="quick-service">
+        <div class="qs-num">04</div>
+        <div class="qs-body"><div class="qs-title">Power Plant Decommissioning</div><div class="qs-sub">Asset monetisation &amp; industrial transitions</div></div>
+        <span class="qs-arrow">→</span>
+      </a>
+      <a href="gas-turbine-generator.html" class="quick-service">
+        <div class="qs-num">05</div>
+        <div class="qs-body"><div class="qs-title">Gas Turbine &amp; MRO Advisory</div><div class="qs-sub">Industrial equipment &amp; maintenance strategy</div></div>
+        <span class="qs-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- STATS RIBBON -->
+  <div class="ribbon">
+    <div class="rib-item"><div class="rib-num">20+</div><div class="rib-label">Years of Expertise</div></div>
+    <div class="rib-item"><div class="rib-num">9</div><div class="rib-label">Service Verticals</div></div>
+    <div class="rib-item"><div class="rib-num">IIM</div><div class="rib-label">Ahmedabad Alumni</div></div>
+    <div class="rib-item"><div class="rib-num">3</div><div class="rib-label">Geographies Served</div></div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="services-head">
+      <div>
+        <div class="sec-label">What We Do</div>
+        <div class="sec-h2">Full Spectrum Advisory</div>
+      </div>
+      <a href="#contact" class="view-all">Enquire about a service →</a>
+    </div>
+    <div class="svc-grid">
+      <a href="business-jet-advisory.html" class="svc-card">
+        <div class="svc-num">01</div>
+        <div class="svc-title">Business Jet &amp; Helicopter Advisory</div>
+        <div class="svc-desc">Aircraft acquisitions, NSOP deployment, helicopter operations, leasing and strategic aviation asset transactions.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="helipad-consultancy.html" class="svc-card">
+        <div class="svc-num">02</div>
+        <div class="svc-title">Helipad Consultancy</div>
+        <div class="svc-desc">End-to-end helipad feasibility, site evaluation, design, DGCA approvals and construction supervision.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="aai-height-clearance.html" class="svc-card">
+        <div class="svc-num">03</div>
+        <div class="svc-title">AAI Height Clearance NOC</div>
+        <div class="svc-desc">Expert guidance on NOC applications for real estate developers, infrastructure companies and builders across India.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="mro-advisory.html" class="svc-card">
+        <div class="svc-num">04</div>
+        <div class="svc-title">MRO Advisory</div>
+        <div class="svc-desc">Maintenance strategy, MRO ecosystem development and technical operations support for operators and OEMs.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="airport-infrastructure.html" class="svc-card">
+        <div class="svc-num">05</div>
+        <div class="svc-title">Airport Infrastructure Advisory</div>
+        <div class="svc-desc">Heliport development, airport feasibility studies, and aviation infrastructure advisory solutions.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="technical-aviation-training.html" class="svc-card">
+        <div class="svc-num">06</div>
+        <div class="svc-title">Technical Aviation Training</div>
+        <div class="svc-desc">Professional aviation training, regulatory awareness programmes and operational readiness for aviation organisations.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="gas-turbine-generator.html" class="svc-card">
+        <div class="svc-num">07</div>
+        <div class="svc-title">Gas Turbine &amp; Generator Advisory</div>
+        <div class="svc-desc">Industrial equipment sourcing, asset evaluation, refurbishment advisory and strategic transaction support.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="power-plant-decommissioning.html" class="svc-card">
+        <div class="svc-num">08</div>
+        <div class="svc-title">Power Plant Decommissioning</div>
+        <div class="svc-desc">Specialised advisory for thermal and industrial plant decommissioning with full asset monetisation strategy.</div>
+        <div class="svc-bar"></div>
+      </a>
+      <a href="metal.html" class="svc-card">
+        <div class="svc-num">09</div>
+        <div class="svc-title">Metal Trading &amp; Advisory</div>
+        <div class="svc-desc">Strategic industrial metal sourcing, trading and advisory — connecting aviation, turbine and industrial value chains.</div>
+        <div class="svc-bar"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT + FOUNDER -->
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <div class="sec-label">Who We Are</div>
+      <div class="sec-h2 sec-h2-light" style="margin-bottom:24px">Where Aviation Expertise<br>Meets Industrial Insight</div>
+      <p class="about-text">POWERMAN is a New Delhi-based strategic advisory firm specialising in aviation, gas turbines, and industrial infrastructure. We bring together seasoned professionals with 20–30 years of hands-on experience drawn from DGCA, AAI Headquarters, Army Aviation, leading airlines, pilot training institutions, and global business jet operations.</p>
+      <p class="about-text">We are committed to delivering solutions that are technically sound, regulatorily compliant, and commercially viable — for government organisations, aviation stakeholders, infrastructure developers, and the wider aviation fraternity.</p>
+      <div class="geo-row">
+        <div class="geo-item"><div class="geo-dot"></div>India</div>
+        <div class="geo-item"><div class="geo-dot"></div>Madagascar</div>
+        <div class="geo-item"><div class="geo-dot"></div>South Asia</div>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="founder-label">Managing Partner</div>
+      <div class="founder-avatar">
+        <img src="founder.jpg" alt="Anil Kumaar Rai" onerror="this.style.display='none';this.parentElement.innerHTML='AKR'" />
+      </div>
+      <div class="founder-name">Anil Kumaar Rai</div>
+      <div class="founder-role">Managing Partner, Powerman</div>
+      <p class="founder-bio">Anil Kumaar Rai is the Managing Partner of POWERMAN, a New Delhi-based strategic advisory firm specialising in aviation, gas turbines, and industrial infrastructure. His career includes senior leadership roles at Srei Group and a JV with a firm led by a professor from MIT USA, covering infrastructure finance, mobility, and industrial sectors. Today, Anil leads POWERMAN's advisory business across India, Madagascar, and South Asia.</p>
+      <div class="edu-list">
+        <div class="edu-row"><div class="edu-dot"></div>University of Delhi</div>
+        <div class="edu-row"><div class="edu-dot"></div>IIM Ahmedabad — Executive Development Programme</div>
+        <div class="edu-row"><div class="edu-dot"></div>MBA, University of West London</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAIN EXPERTS -->
+  <section class="experts-section" id="experts">
+    <div class="sec-label">Our People</div>
+    <div class="sec-h2" style="margin-bottom:16px">Domain Experts</div>
+    <p class="experts-intro">Our team comprises seasoned aviation professionals with 20–30 years of hands-on experience across DGCA, AAI Headquarters, Army Aviation, leading airlines, and business jet operations — combining deep regulatory knowledge with practical implementation expertise.</p>
+    <div class="experts-grid">
+      <div class="expert-card">
+        <div class="expert-title">ATC, ATFM, PBN, ILS &amp; ELPA Experts</div>
+        <ul class="expert-list">
+          <li>ICAO Annex 11 &amp; Annex 14</li>
+          <li>Air Traffic Control (ATC)</li>
+          <li>Air Traffic Flow Management (ATFM)</li>
+          <li>Performance Based Navigation (PBN)</li>
+          <li>Instrument Approach &amp; Landing Procedures</li>
+          <li>ELPA &amp; Associated Approval Processes</li>
+        </ul>
+      </div>
+      <div class="expert-card">
+        <div class="expert-title">Aircraft Airworthiness &amp; Certification Experts</div>
+        <p class="expert-desc">Specialised expertise in aircraft airworthiness, regulatory compliance, technical certification, operational approvals, and aviation safety standards aligned with DGCA and international aviation regulations.</p>
+      </div>
+      <div class="expert-card">
+        <div class="expert-title">Helipad Design &amp; Build Experts</div>
+        <p class="expert-desc">Specialised expertise in helipad feasibility studies, site evaluation, helipad design, landing and take-off alignment preparation, regulatory approvals, project management consultancy (PMC), construction supervision, and end-to-end execution in compliance with DGCA and international aviation standards.</p>
+      </div>
+      <div class="expert-card">
+        <div class="expert-title">Business Jets &amp; Helicopter Transaction Experts</div>
+        <p class="expert-desc">Strategic advisory for aircraft acquisitions, business jet operations, helicopter consultancy, leasing, and aviation asset transactions across India and South Asia.</p>
+      </div>
+      <div class="expert-card">
+        <div class="expert-title">Power Plant Decommissioning Experts</div>
+        <p class="expert-desc">Specialised advisory services for decommissioning of thermal and industrial power plants including gas turbines, generators, industrial assets evaluation, dismantling strategy, project coordination, and infrastructure transition solutions.</p>
+      </div>
+      <div class="expert-card">
+        <div class="expert-title">MRO &amp; Technical Training Experts</div>
+        <p class="expert-desc">Deep expertise in MRO ecosystem development, maintenance strategy, AMO regulatory frameworks, and professional aviation training programmes for operators, regulators, and aviation organisations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-section" id="projects">
+    <div class="sec-label">Our Work</div>
+    <div class="sec-h2">Projects Showcase</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Helicopter Advisory Project" class="project-img" />
+        <div class="project-body">
+          <div class="project-title">Helicopter Advisory</div>
+          <div class="project-desc">Strategic helicopter consultancy and operational advisory services for corporate and government operators.</div>
+          <div class="project-bar"></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Helipad Infrastructure Project" class="project-img" />
+        <div class="project-body">
+          <div class="project-title">Helipad Infrastructure</div>
+          <div class="project-desc">Rooftop helipad planning, DGCA approvals and full aviation infrastructure solutions for real estate developers.</div>
+          <div class="project-bar"></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="project3.jpg" alt="MRO Advisory Project" class="project-img" />
+        <div class="project-body">
+          <div class="project-title">MRO Advisory</div>
+          <div class="project-desc">Aviation maintenance strategy, MRO ecosystem development and airport technical support consultancy.</div>
+          <div class="project-bar"></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="project4.jpg" alt="Power Plant Decommissioning Project" class="project-img" />
+        <div class="project-body">
+          <div class="project-title">Power Plant Decommissioning</div>
+          <div class="project-desc">Industrial infrastructure advisory, gas turbine and DG set acquisition and asset monetisation solutions.</div>
+          <div class="project-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="sec-label">Reach Us</div>
+    <div class="sec-h2 sec-h2-light">Get in Touch</div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-title">Contact Information</div>
+        <div class="contact-row">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:anil.kumaar.rai@powerman.live">anil.kumaar.rai@powerman.live</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label">Website</div>
+            <div class="contact-value"><a href="https://www.powerman.live">www.powerman.live</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">New Delhi, India</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">in</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value"><a href="https://www.linkedin.com/in/anil-kumaar-rai-53050a17" target="_blank">Anil Kumaar Rai</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">▶</div>
+          <div>
+            <div class="contact-label">Podcast</div>
+            <div class="contact-value"><a href="https://youtube.com/@powerman" target="_blank">youtube.com/@powerman</a></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-info-title">Send an Enquiry</div>
+        <form class="contact-form" action="mailto:anil.kumaar.rai@powerman.live" method="get" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" name="name" placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fservice">Service of Interest</label>
+            <select id="fservice" name="service">
+              <option value="">Select a service...</option>
+              <option>Business Jet &amp; Helicopter Advisory</option>
+              <option>Helipad Consultancy</option>
+              <option>AAI Height Clearance NOC</option>
+              <option>MRO Advisory</option>
+              <option>Airport Infrastructure Advisory</option>
+              <option>Technical Aviation Training</option>
+              <option>Gas Turbine &amp; Generator Advisory</option>
+              <option>Power Plant Decommissioning</option>
+              <option>Metal Trading &amp; Advisory</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Your Message</label>
+            <textarea id="fmsg" name="message" placeholder="Please describe your requirement..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Enquiry →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">POWERMAN</div>
+        <div class="footer-brand-tagline">Aviation · Turbine · Metal</div>
+        <p class="footer-brand-desc">Strategic advisory firm at the crossroads of aviation, infrastructure, and industrial solutions — built on decades of regulatory and operational experience across India and South Asia.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="business-jet-advisory.html">Business Aviation</a></li>
+          <li><a href="helipad-consultancy.html">Helipad Consultancy</a></li>
+          <li><a href="aai-height-clearance.html">AAI Height Clearance</a></li>
+          <li><a href="mro-advisory.html">MRO Advisory</a></li>
+          <li><a href="airport-infrastructure.html">Airport Infrastructure</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">More Services</div>
+        <ul class="footer-links">
+          <li><a href="technical-aviation-training.html">Aviation Training</a></li>
+          <li><a href="gas-turbine-generator.html">Gas Turbine Advisory</a></li>
+          <li><a href="power-plant-decommissioning.html">Power Plant</a></li>
+          <li><a href="metal.html">Metal Trading</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="mailto:anil.kumaar.rai@powerman.live">Email Us</a></li>
+          <li><a href="https://www.linkedin.com/in/anil-kumaar-rai-53050a17" target="_blank">LinkedIn</a></li>
+          <li><a href="https://youtube.com/@powerman" target="_blank">Podcast</a></li>
+          <li><a href="#about">About Powerman</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 POWERMAN · New Delhi, India · All rights reserved</div>
+      <div class="footer-links-inline">
+        <a href="mailto:anil.kumaar.rai@powerman.live">anil.kumaar.rai@powerman.live</a>
+        <a href="https://www.powerman.live">www.powerman.live</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
