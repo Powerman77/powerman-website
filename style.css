@@ -1379,13 +1379,88 @@ transform:
 translateY(0);
 
 }
-/* SERVICE CARD BANNERS */
+/* PREMIUM HOMEPAGE SERVICE CARDS */
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(320px,1fr)
+);
+
+gap:32px;
+
+margin-top:70px;
+
+}
+
+
+
+.service-card{
+
+display:block;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(8,20,40,.96),
+rgba(5,15,30,.96)
+);
+
+padding:28px;
+
+border-radius:26px;
+
+overflow:hidden;
+
+position:relative;
+
+text-decoration:none;
+
+border:
+
+1px solid
+
+rgba(212,164,55,.15);
+
+transition:.35s;
+
+}
+
+
+
+.service-card:hover{
+
+transform:
+
+translateY(-8px);
+
+border:
+
+1px solid
+
+rgba(212,164,55,.45);
+
+box-shadow:
+
+0 20px 45px
+
+rgba(0,0,0,.28);
+
+}
+
+
 
 .service-banner{
 
 width:100%;
 
-height:170px;
+height:180px;
 
 object-fit:cover;
 
@@ -1393,41 +1468,81 @@ display:block;
 
 border-radius:18px;
 
-margin-bottom:22px;
+margin-bottom:24px;
 
 }
 
-.service-card{
 
-overflow:hidden;
 
-position:relative;
+.service-card h3{
 
-}
+font-size:30px;
 
-.service-icon{
-
-font-size:28px;
-
-display:inline-block;
-
-padding:10px;
-
-border-radius:12px;
-
-background:
-
-rgba(255,255,255,.08);
+line-height:1.2;
 
 margin-bottom:18px;
 
+color:white;
+
+text-decoration:none;
+
 }
+
+
+
+.service-card p{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#c9c9c9;
+
+}
+
+
+
+/* MOBILE */
 
 @media(max-width:900px){
 
+.services-grid{
+
+gap:24px;
+
+}
+
+
+
+.service-card{
+
+padding:22px;
+
+}
+
+
+
 .service-banner{
 
-height:140px;
+height:150px;
+
+}
+
+
+
+.service-card h3{
+
+font-size:24px;
+
+}
+
+
+
+.service-card p{
+
+font-size:17px;
+
+line-height:1.6;
 
 }
 
