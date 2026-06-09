@@ -4,10 +4,47 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Airport Infrastructure Advisory | POWERMAN</title>
-<meta name="description" content="POWERMAN provides airport infrastructure advisory services across India, Madagascar and South Asia. Expert aviation and industrial advisory."/>
+<meta name="description" content="POWERMAN provides expert airport infrastructure advisory including pre-feasibility studies, OLS surveys, flight procedure design, safety audits and aerodrome licensing support across India."/>
 <link rel="icon" href="logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="powerman-service.css"/>
+<style>
+.services-detail{padding:80px 48px;background:var(--white)}
+.services-detail-inner{max-width:1280px;margin:0 auto}
+.svc-detail-block{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start;padding:56px 0;border-bottom:1px solid var(--light)}
+.svc-detail-block:last-child{border-bottom:none}
+.svc-detail-block.reverse{direction:rtl}
+.svc-detail-block.reverse>*{direction:ltr}
+.svc-detail-num{font-family:'Barlow Condensed',sans-serif;font-size:80px;font-weight:900;color:rgba(200,150,42,0.08);line-height:1;margin-bottom:-12px}
+.svc-detail-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.svc-detail-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:900;text-transform:uppercase;color:var(--navy);line-height:1.1;letter-spacing:1px;margin-bottom:12px}
+.svc-detail-bar{width:40px;height:3px;background:var(--gold);margin-bottom:20px}
+.svc-detail-p{font-size:14px;line-height:1.9;color:var(--muted);font-weight:300;margin-bottom:20px}
+.svc-detail-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
+.svc-detail-list li{font-size:13px;color:var(--ink);display:flex;align-items:center;gap:10px;font-weight:400}
+.svc-detail-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.svc-detail-note{font-size:13px;color:var(--navy);font-weight:500;font-style:italic;padding:14px 18px;border-left:3px solid var(--gold);background:var(--offwhite);margin-top:8px}
+.svc-sidebar-dark{background:var(--navy);padding:32px}
+.svc-sidebar-title{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:800;text-transform:uppercase;color:var(--gold2);letter-spacing:1px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(200,150,42,0.2)}
+.svc-sidebar-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.svc-sidebar-list li{font-size:13px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;font-weight:300}
+.svc-sidebar-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.svc-sidebar-body{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;font-weight:300}
+
+.intro-banner{background:var(--navy);padding:56px 48px;text-align:center}
+.intro-banner-inner{max-width:900px;margin:0 auto}
+.intro-banner-h{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:900;text-transform:uppercase;color:var(--white);line-height:1.2;letter-spacing:1px;margin-bottom:16px}
+.intro-banner-h span{color:var(--gold2)}
+.intro-banner-p{font-size:15px;line-height:1.9;color:rgba(255,255,255,0.55);font-weight:300}
+
+.standards-strip{background:var(--gold);padding:36px 48px}
+.standards-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.std-item{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;text-transform:uppercase;color:var(--navy);letter-spacing:2px;display:flex;align-items:center;gap:10px}
+.std-dot{width:6px;height:6px;border-radius:50%;background:rgba(10,32,53,0.3)}
+
+@media(max-width:1024px){.svc-detail-block{grid-template-columns:1fr;gap:32px}.svc-detail-block.reverse{direction:ltr}}
+@media(max-width:768px){.services-detail,.intro-banner,.standards-strip{padding:56px 24px}.standards-inner{gap:20px}}
+</style>
 </head>
 <body>
 
@@ -49,63 +86,208 @@
     <a href="index.html#services" class="page-hero-back">← All Services</a>
     <div class="page-hero-tag">Infrastructure · POWERMAN</div>
     <h1 class="page-hero-h1">AIRPORT<br><span>INFRASTRUCTURE</span><br>ADVISORY</h1>
-    <p class="page-hero-sub">Strategic advisory for airport and heliport development — covering feasibility, planning, stakeholder coordination and project execution.</p>
+    <p class="page-hero-sub">Expert aviation consulting for airport development, compliance, safety, and regulatory approval — across India.</p>
   </div>
 </div>
 
-<!-- PAGE BODY -->
-<div class="page-body">
-  <div class="two-col">
-    <div>
-      <div class="section-tag">Overview</div>
-      <h2 class="section-h2">AIRPORT INFRASTRUCTURE ADVISORY</h2>
-      <div class="divider"></div>
-      <p class="intro-text">POWERMAN provides strategic advisory services supporting airport, heliport, and aviation infrastructure projects across planning, development, stakeholder coordination, and project execution phases. As India continues to expand its aviation infrastructure under UDAN and Vision 2040, our advisory helps government bodies, developers, and investors navigate the complexity of airport development with confidence.</p>
+<!-- INTRO BANNER -->
+<div class="intro-banner">
+  <div class="intro-banner-inner">
+    <h2 class="intro-banner-h">Building <span>Safe, Compliant</span> & Future-Ready<br>Aviation Facilities Across India</h2>
+    <p class="intro-banner-p">POWERMAN delivers specialist airport infrastructure advisory services — from pre-feasibility and obstacle surveys through flight procedure design, safety audits, and aerodrome licensing. Our team brings decades of hands-on regulatory and operational experience, delivering outputs that meet ICAO, MoCA, DGCA, and AAI requirements within agreed timelines.</p>
+  </div>
+</div>
 
-      <div class="service-list-title">Services Offered</div>
-      <ul class="service-list">
-        <li>Greenfield & Brownfield Airport Feasibility Studies</li>
-<li>Airport Infrastructure Planning & Strategy</li>
-<li>Heliport Development Advisory</li>
-<li>UDAN Scheme Navigation Support</li>
-<li>Stakeholder & Government Coordination</li>
-<li>Infrastructure Strategy Development</li>
-<li>Project Development Advisory</li>
-<li>Operational Readiness Support</li>
-      </ul>
+<!-- STANDARDS STRIP -->
+<div class="standards-strip">
+  <div class="standards-inner">
+    <div class="std-item">ICAO</div>
+    <div class="std-dot"></div>
+    <div class="std-item">MoCA</div>
+    <div class="std-dot"></div>
+    <div class="std-item">DGCA</div>
+    <div class="std-dot"></div>
+    <div class="std-item">AAI</div>
+    <div class="std-dot"></div>
+    <div class="std-item">PBN Compliant</div>
+  </div>
+</div>
+
+<!-- SERVICE DETAIL BLOCKS -->
+<div class="services-detail">
+  <div class="services-detail-inner">
+
+    <!-- 01 Pre-Feasibility -->
+    <div class="svc-detail-block">
+      <div>
+        <div class="svc-detail-num">01</div>
+        <div class="svc-detail-tag">Planning</div>
+        <h3 class="svc-detail-h">Pre-Feasibility Study</h3>
+        <div class="svc-detail-bar"></div>
+        <p class="svc-detail-p">A Pre-Feasibility Study for a greenfield airport is an initial strategic assessment that evaluates overall project viability before significant resources are committed. It examines critical factors including technical infrastructure requirements, estimated financial costs, market demand, regulatory compliance, and environmental impacts — providing an early indication of whether the project should advance to detailed planning and investment stages.</p>
+        <p class="svc-detail-p">Our team brings decades of experience conducting comprehensive feasibility studies for airports and helipads. Our reports are built on rigorous research and cover:</p>
+        <ul class="svc-detail-list">
+          <li>Land requirements and site suitability</li>
+          <li>Runway orientation and dimensional specifications</li>
+          <li>Airside and terminal building requirements</li>
+          <li>Licensing requirements and regulatory alignment</li>
+          <li>Coordination with civil and defence authorities</li>
+          <li>ATS route infrastructure planning</li>
+          <li>Siting of Communication, Navigation & Surveillance (CNS) systems</li>
+          <li>Airport and airspace capacity evaluation</li>
+          <li>Financial viability assessment</li>
+        </ul>
+        <div class="svc-detail-note">A Pre-Feasibility Study helps stakeholders identify challenges early, align projects with broader objectives, and avoid unnecessary financial exposure — serving as a critical filter against high-risk or unfeasible ideas.</div>
+      </div>
+      <div>
+        <div class="svc-sidebar-dark">
+          <div class="svc-sidebar-title">Who This Is For</div>
+          <ul class="svc-sidebar-list">
+            <li>Greenfield Airport Developers</li>
+            <li>State & Central Government Bodies</li>
+            <li>Private Infrastructure Investors</li>
+            <li>Industrial & SEZ Projects</li>
+            <li>UDAN Scheme Applicants</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">Who We Support</div>
-        <ul class="sidebar-list">
-          <li>Airport Developers & Operators</li>
-<li>State & Central Government Bodies</li>
-<li>Infrastructure Companies</li>
-<li>Industrial & SEZ Projects</li>
-<li>Private Developers & Investors</li>
-<li>Investment & Infrastructure Groups</li>
+    <!-- 02 OLS Survey -->
+    <div class="svc-detail-block reverse">
+      <div>
+        <div class="svc-detail-num">02</div>
+        <div class="svc-detail-tag">Safety</div>
+        <h3 class="svc-detail-h">Obstacle Limitation Surface (OLS) Survey</h3>
+        <div class="svc-detail-bar"></div>
+        <p class="svc-detail-p">OLS Surveys are essential for airport authorities, aviation regulators, and urban planners in maintaining flight safety and operational efficiency. These surveys support airspace design, infrastructure development, and obstacle clearance assessment.</p>
+        <p class="svc-detail-p">The collected data is used to:</p>
+        <ul class="svc-detail-list">
+          <li>Monitor existing obstacles in and around the aerodrome</li>
+          <li>Plan mitigation strategies for identified hazards</li>
+          <li>Guide zoning and land-use decisions in airport vicinities</li>
         </ul>
+        <div class="svc-detail-note">By identifying potential hazards proactively, OLS surveys contribute significantly to minimising risk and enabling smooth operations across both civil and military aviation.</div>
       </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">Why POWERMAN</div>
-        <ul class="sidebar-list">
-          <li>Infrastructure-Focused Aviation Expertise</li>
-<li>Understanding of India's Aviation Policy Landscape</li>
-<li>Partner-Led Technical Ecosystem</li>
-<li>Commercially Practical Advisory Solutions</li>
-<li>Integrated Project Development Support</li>
-        </ul>
+      <div>
+        <div class="svc-sidebar-dark">
+          <div class="svc-sidebar-title">Applications</div>
+          <ul class="svc-sidebar-list">
+            <li>Airport Authorities</li>
+            <li>Aviation Regulators</li>
+            <li>Urban & Regional Planners</li>
+            <li>Real Estate Developers near airports</li>
+            <li>Military Aviation Facilities</li>
+          </ul>
+        </div>
       </div>
     </div>
+
+    <!-- 03 Flight Procedure Design -->
+    <div class="svc-detail-block">
+      <div>
+        <div class="svc-detail-num">03</div>
+        <div class="svc-detail-tag">Operations</div>
+        <h3 class="svc-detail-h">Flight Procedure Design</h3>
+        <div class="svc-detail-bar"></div>
+        <p class="svc-detail-p">Flight Procedure Design develops safe and efficient routes for aircraft across all phases of flight — departures, en-route segments, arrivals, and approaches. Procedures are established using accurate navigation data, terrain assessments, and international standards set by ICAO.</p>
+        <ul class="svc-detail-list">
+          <li>Optimise available airspace utilisation</li>
+          <li>Reduce pilot workload</li>
+          <li>Guarantee obstacle clearance</li>
+          <li>Uphold stringent safety margins</li>
+          <li>Account for air traffic volumes, environmental factors, and airport infrastructure constraints</li>
+        </ul>
+        <p class="svc-detail-p">Carefully crafted flight procedures prevent airspace conflicts, lower fuel consumption, and reduce noise impacts on surrounding communities. They are especially critical in areas with challenging terrain or at high-traffic airports, where precision is non-negotiable.</p>
+        <div class="svc-detail-note">All procedures must receive DGCA approval before implementation. Our team — comprising former Authorised Procedure Designers — provides comprehensive support for developing PBN-compliant procedures that enhance accessibility, safety, and operational efficiency.</div>
+      </div>
+      <div>
+        <div class="svc-sidebar-dark">
+          <div class="svc-sidebar-title">Procedure Types</div>
+          <ul class="svc-sidebar-list">
+            <li>Departure Procedures (SID)</li>
+            <li>Arrival Procedures (STAR)</li>
+            <li>Instrument Approach Procedures</li>
+            <li>PBN / RNAV / RNP Procedures</li>
+            <li>Visual Flight Procedures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Safety Audit -->
+    <div class="svc-detail-block reverse">
+      <div>
+        <div class="svc-detail-num">04</div>
+        <div class="svc-detail-tag">Compliance</div>
+        <h3 class="svc-detail-h">Aviation Safety Audit</h3>
+        <div class="svc-detail-bar"></div>
+        <p class="svc-detail-p">Safety is the cornerstone of aviation. Our ICAO-trained professionals deliver comprehensive Aviation Safety Audits designed to evaluate and enhance every critical component of airport functioning.</p>
+        <p class="svc-detail-p">Our audits cover:</p>
+        <ul class="svc-detail-list">
+          <li>Airport Operations</li>
+          <li>Air Traffic Management (ATM)</li>
+          <li>Aircraft Rescue and Fire Fighting (ARFF)</li>
+          <li>Communication, Navigation & Surveillance (CNS) systems</li>
+        </ul>
+        <p class="svc-detail-p">We go beyond compliance — identifying operational gaps, assessing risks, and recommending practical, implementable solutions aligned with international aviation safety standards. By combining global best practices with local operational insights, we help airports strengthen their safety culture, improve efficiency, and build confidence among regulators, airlines, and passengers.</p>
+        <div class="svc-detail-note">All audits conducted in full accordance with ICAO and DGCA norms.</div>
+      </div>
+      <div>
+        <div class="svc-sidebar-dark">
+          <div class="svc-sidebar-title">Audit Scope</div>
+          <ul class="svc-sidebar-list">
+            <li>Airport Operations Review</li>
+            <li>ATM System Assessment</li>
+            <li>ARFF Capability Evaluation</li>
+            <li>CNS Systems Check</li>
+            <li>Safety Management Systems</li>
+            <li>Emergency Response Assessment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Aerodrome Licensing -->
+    <div class="svc-detail-block">
+      <div>
+        <div class="svc-detail-num">05</div>
+        <div class="svc-detail-tag">Regulatory</div>
+        <h3 class="svc-detail-h">Aerodrome Licensing Support</h3>
+        <div class="svc-detail-bar"></div>
+        <p class="svc-detail-p">POWERMAN offers end-to-end expertise in guiding airports through the Aerodrome Licensing process, ensuring full alignment with DGCA regulations and ICAO standards. Our panel of qualified aviation specialists conducts thorough evaluations covering:</p>
+        <ul class="svc-detail-list">
+          <li>Infrastructure adequacy assessment</li>
+          <li>Safety systems and airfield operations review</li>
+          <li>Emergency response capabilities evaluation</li>
+          <li>CNS/ATM facilities assessment</li>
+        </ul>
+        <p class="svc-detail-p">From initial assessments and mandatory documentation to regulatory audits and final certification, we provide complete support at every stage. Our solutions are practical, tailored, and rooted in international benchmarks — enabling airports to achieve licensing smoothly while enhancing long-term operational efficiency.</p>
+        <div class="svc-detail-note">Our approach is practical, tailored, and rooted in international benchmarks — enabling airports to achieve licensing smoothly while enhancing long-term operational efficiency.</div>
+      </div>
+      <div>
+        <div class="svc-sidebar-dark">
+          <div class="svc-sidebar-title">Licensing Stages</div>
+          <ul class="svc-sidebar-list">
+            <li>Initial Infrastructure Assessment</li>
+            <li>Mandatory Documentation Support</li>
+            <li>DGCA Regulatory Audit Support</li>
+            <li>Safety System Compliance</li>
+            <li>CNS/ATM Facility Review</li>
+            <li>Final Certification Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <!-- CTA STRIP -->
 <div class="cta-strip">
   <div class="cta-strip-inner">
-    <h2 class="cta-h">READY TO DISCUSS<br>YOUR REQUIREMENTS?</h2>
-    <p class="cta-p">Contact POWERMAN today. Our team brings decades of regulatory and operational experience to every engagement — delivering solutions that are technically sound, compliant, and commercially viable.</p>
+    <h2 class="cta-h">PLANNING AN AIRPORT<br>INFRASTRUCTURE PROJECT?</h2>
+    <p class="cta-p">POWERMAN is committed to building safe, compliant, and future-ready aviation facilities across India. Contact us to discuss your airport infrastructure requirements — from pre-feasibility to final licensing.</p>
     <a href="index.html#contact" class="btn-dark">Get in Touch</a>
   </div>
 </div>
